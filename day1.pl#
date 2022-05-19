@@ -21,13 +21,15 @@ sits_right_of(ronWeasley, natalieMcDonald).
 % ?- sits_right_of(hermioneGranger, harryPotter).
 % false.
 
-% I
+% Is Harry to the right of Ginny?
 % ?- sits_right_of(harryPotter, ginnyWeasley).
 % false.
 
+% Who is to the right of Harry?
 % ?- sits_right_of(X, harryPotter).
 % X = colinCreevey.
 
+% Who is sitting at the table?
 % ?- sits_right_of(X, Y).
 % X = natalieMcDonald,
 % Y = kathieBell ;
@@ -68,11 +70,30 @@ sits_right_of(ronWeasley, natalieMcDonald).
 
 sits_left_of(X, Y) :- sits_right_of(Y, X).
 
+%Iis Hermione to the left of Harry?
+% ?- sits_left_of(hermioneGranger, harryPotter).
+% true.
+
 are_neighbors_of(X, Y, Z) :- sits_left_of(X, Z), sits_right_of(Y, Z).
+
+% Who are Neville's neighbors?
+% ?- are_neighbors_of(X, Y, nevilleLongbottom).
+% X = aliciaSpinnet,
+% Y = lavenderBrown.
+
+% Who is sitting two seats to the right of Neville?
+% ?- sits_right_of(X, nevilleLongbottom).
+% X = lavenderBrown.
+% ?- sits_right_of(X, lavenderBrown).
+% X = parvatiPatil.
 
 next_to_each_other(X, Y) :- sits_left_of(X, Y).
 next_to_each_other(X, Y) :- sits_right_of(X, Y).
 
+% ?- next_to_each_other(kathieBell, colinCreevey).
+% false.
 
+% ?- next_to_each_other(deanThomas, dennisCreevey).
+true 
 
 
