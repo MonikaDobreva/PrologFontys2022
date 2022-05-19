@@ -116,10 +116,10 @@ male(james).
 male(vernon).
 male(dudley).
 % adding great-great-grandparents for Harry for testing purposes.
-male(greatGreatGrandfather).
+male(greatGrandfather).
 male(greatGreatGrandfather).
 
-female(greatGreatGrandmother).
+female(greatGrandmother).
 female(greatGreatGrandmother).
 female(lili).
 female(petunia).
