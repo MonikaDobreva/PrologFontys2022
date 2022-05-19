@@ -213,6 +213,10 @@ not_parent(X, Y) :- not(parent_of(X, Y)).
 % X = harry ;
 % false.
 
+% Is Dudley a parent of Harry?
+% ?- not_parent(dudley, harry).
+% true.
+
 % Is James Harry's father?
 % ?- father_of(james, harry).
 % true.
@@ -232,3 +236,16 @@ not_parent(X, Y) :- not(parent_of(X, Y)).
 % Is Helen Harry's grandmother?
 % ?- grandmother_of(helen, harry).
 % true
+
+
+
+
+
+
+
+
+
+
+
+
+
