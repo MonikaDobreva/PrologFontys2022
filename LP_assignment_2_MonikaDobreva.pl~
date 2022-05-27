@@ -1,0 +1,6 @@
+% TASK 1 - List Exercises
+% a.
+
+list_lenght([], 0).
+list_lenght([Head|Tail], Lenght) :-  list_lenght(Tail, Count), Lenght is Count+1.
+
